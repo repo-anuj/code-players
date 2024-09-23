@@ -1,101 +1,225 @@
+"use client";
+
+import { AnimatedShinyTextDemo } from "@/components/demos/animated-shiny-text-demo";
+import { CoverDemo } from "@/components/demos/cover-demo";
+import { MarqueeDemo } from "@/components/demos/marquee-demo";
+import { WordPullUpDemo } from "@/components/demos/word-pull-up-demo";
+import BoxReveal from "@/components/magicui/box-reveal";
+import NumberTicker from "@/components/magicui/number-ticker";
 import Image from "next/image";
+import Link from "next/link";
+import { PiCheckBold } from "react-icons/pi";
+import { Link as ScrollLink, Element } from "react-scroll";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div
+      className="overflow-clip 
+ inset-0 
+ -z-10 h-full w-full bg-[#fafafa]
+  bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)]
+   bg-[size:14px_24px]"
+    >
+      <Element
+        name="top"
+        className="overflow-hidden rounded-[6px] top-5 sticky md:mx-auto z-50 
+   xl:w-4/5 2xl:w-[68%] bg-white flex items-center 
+   justify-between py-6 px-4 md:px-8 mx-6"
+      >
+        <Link href={"/"}>
+          <Image
+            src={"/logo/logo.png"}
+            alt="Logo"
+            width={1000}
+            height={1000}
+            className="w-28"
+          />
+        </Link>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+        <div className="absolute right-1/2 translate-x-1/2 transform">
+          <div className="hidden md:flex gap-x-10 items-center text-gray-700 font-medium text-lg cursor-pointer">
+            <Link href={"/showcase"} className="hover:text-blue-500">
+              Product
+            </Link>
+
+            <ScrollLink
+              to="services"
+              smooth={true}
+              className="hover:text-blue-500"
+            >
+              Services
+            </ScrollLink>
+
+            <ScrollLink
+              to="process"
+              smooth={true}
+              className="hover:text-blue-500"
+            >
+              Process
+            </ScrollLink>
+
+            <ScrollLink
+              to="guarentees"
+              smooth={true}
+              className="hover:text-blue-500"
+            >
+              Intrigation
+            </ScrollLink>
+          </div>
+        </div>
+
+        <div className="flex items-center gap-x-4">
+          <Link
+            href={"/meeting"}
+            className="
+  py-3 
+  px-6
+  text-lg 
+  hover:bg-[#abcbff]
+  rounded-[6px]
+  border-2
+  border-black
+  text-white
+  bg-[#121212]
+  transition
+  duration-200
+     hover:shadow-[1px_1px_rgba(0,0,0),2px_2px_rgba(0,0,0),3px_3px_rgba(0,0,0),4px_4px_rgba(0,0,0),5px_5px_0px_0px_rgba(0,0,0)] dark:shadow-[1px_1px_rgba(255,255,255),2px_2px_rgba(255,255,255),3px_3px_rgba(255,255,255),4px_4px_rgba(255,255,255),5px_5px_0px_0px_rgba(255,255,255)] "
           >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            Join-Us
+          </Link>
+        </div>
+      </Element>
+
+      <main className="md:pb-10">
+        <div className="md:px-0 mx-6 xl:w-4/5 2xl:w-[68%] md:mx-auto mt-14">
+          <AnimatedShinyTextDemo />
+
+          <h1>
+            <CoverDemo />
+          </h1>
+          <p
+            className="md:text-center
+           text-xl md:text-2xl my-6 md:my-10 md:w-4/5 mx-auto text-gray-500"
           >
-            Read our docs
-          </a>
+            Get your Free Demo now! & Take a perfect strategy for boosting your
+            business.
+          </p>
+
+          <div
+            className="
+                 flex 
+                  md:justify-center 
+                  items-center 
+                  gap-x-4
+                   "
+          >
+            <Link
+              href="/meeting"
+              className="py-3 
+            px-10
+            md:px-16
+      md:text-xl
+      hover:bg-[#abcbff] 
+      rounded-[6px]
+      border-2 
+      border-black 
+      dark:border-white 
+       bg-[#121212] 
+       text-white 
+       transition 
+       duration-200 
+       hover:shadow-[1px_1px_rgba(0,0,0),2px_2px_rgba(0,0,0),3px_3px_rgba(0,0,0),4px_4px_rgba(0,0,0),5px_5px_0px_0px_rgba(0,0,0)] dark:shadow-[1px_1px_rgba(255,255,255),2px_2px_rgba(255,255,255),3px_3px_rgba(255,255,255),4px_4px_rgba(255,255,255),5px_5px_0px_0px_rgba(255,255,255)] "
+            >
+              Join-Us
+            </Link>
+            <Link
+              href={"/showcase"}
+              className="
+              bg-white
+   py-3 
+   px-10
+   md:px-16
+      md:text-xl
+        border-4
+        border-black
+        rounded-[6px]
+        hover:shadow-[1px_1px_rgba(0,0,0),2px_2px_rgba(0,0,0),3px_3px_rgba(0,0,0),4px_4px_rgba(0,0,0),5px_5px_0px_0px_rgba(0,0,0)] dark:shadow-[1px_1px_rgba(255,255,255),2px_2px_rgba(255,255,255),3px_3px_rgba(255,255,255),4px_4px_rgba(255,255,255),5px_5px_0px_0px_rgba(255,255,255)]"
+            >
+              Download
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 items-center text-left md:justify-items-center md:mx-auto mt-10 md:mt-16">
+            <BoxReveal boxColor={"#3b82f6"} duration={0.5}>
+              <p className="md:text-xl font-semibold flex gap-x-2 md:gap-x-4 items-center">
+                <PiCheckBold className="text-xl text-blue-500" />
+                Integrate
+              </p>
+            </BoxReveal>
+            <BoxReveal boxColor={"#3b82f6"} duration={0.5}>
+              <p className="md:text-xl font-semibold flex gap-x-2 md:gap-x-4 items-center">
+                <PiCheckBold className="text-xl text-blue-500" />
+                Manage
+              </p>
+            </BoxReveal>
+            <BoxReveal boxColor={"#3b82f6"} duration={0.5}>
+              <p className="md:text-xl font-semibold flex gap-x-2 md:gap-x-4 items-center">
+                <PiCheckBold className="text-xl text-blue-500" />
+                Automate
+              </p>
+            </BoxReveal>
+            <BoxReveal boxColor={"#3b82f6"} duration={0.5}>
+              <p className="md:text-xl font-semibold flex gap-x-2 md:gap-x-4 items-center">
+                <PiCheckBold className="text-xl text-blue-500" />
+                Optimize
+              </p>
+            </BoxReveal>
+          </div>
+
+          <div className="md:flex items-center justify-between gap-y-4 my-10 gap-x-28 mx-auto">
+            <div className="md:w-2/5">
+              <h1 className="text-2xl font-medium text-gray-600 w-4/5">
+                Trusted by fast moving Enterprises
+              </h1>
+
+              <div className="flex my-6 gap-x-5 w-full">
+                <div>
+                  <h1 className="text-blue-500 text-3xl md:text-5xl">
+                    <NumberTicker value={1000} /> +
+                    <p className="text-gray-500 text-sm md:text-md">
+                      Happy Enterpruner
+                    </p>
+                  </h1>
+                </div>
+                <div className="w-px bg-gray-300 self-stretch"></div>
+
+                <div className="flex-1 min-w-0">
+                  <h1 className="text-blue-500 text-3xl md:text-5xl whitespace-nowrap overflow-hidden">
+                    <NumberTicker value={100} /> +
+                    <p className="text-gray-500 text-sm md:text-md">
+                      Projects Completed
+                    </p>
+                  </h1>
+                </div>
+              </div>
+            </div>
+
+            <section className="overflow-hidden mt-10 md:w-4/5">
+              <MarqueeDemo />
+            </section>
+          </div>
         </div>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      <Element name="services">
+      <div className="md:px-0 mx-6 xl:w-4/5 2xl:w-[68%] md:mx-auto ">
+      <h1>
+          <WordPullUpDemo />
+        </h1>
+        <p className="md:text-center py-4 md:w-1/2 mx-auto text-xl md:text-2xl text-gray-500">
+        All of our services are designed to help your Enterprise stand out 
+        </p>
+      </div>
+      </Element>
     </div>
   );
 }
