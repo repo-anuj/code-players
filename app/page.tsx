@@ -14,6 +14,8 @@ import Link from "next/link";
 import { PiCheckBold } from "react-icons/pi";
 import { Link as ScrollLink, Element } from "react-scroll";
 import { IconStarFilled } from "@tabler/icons-react";
+import { ShootingStarsAndStarsBackgroundDemo } from "@/components/demos/shooting-stars-demo";
+import LetsMakeThingsHappenSection from "@/components/ui/lets-make-things-happen";
 
 const services = [
   {
@@ -361,6 +363,38 @@ export default function Home() {
           </div>
         </main>
       </section>
+      <Element name="guarentees">
+        <ShootingStarsAndStarsBackgroundDemo />
+      </Element>
+
+      <section className="my-10 md:py-20 xl:w-4/5 2xl:w-[68%] md:mx-auto">
+      <LetsMakeThingsHappenSection />
+      </section>
+
+      <footer className="bg-[#fafafa] py-10  px-6 md:px-0 md:mx-auto border-t">
+        <div className="flex flex-col  justify-between gap-y-3 xl:w-4/5 2xl:w-[68%] mx-auto">
+          <h1 className="text-3xl md:text-5xl font-medium ">
+            <Image
+              src={"/logo/logo.png"}
+              width={10000}
+              height={10000}
+              className="w-40"
+              alt="image"
+            />{" "}
+          </h1>
+          <p className="text-left  text-xl  text-gray-500">519-200-5000</p>
+          <p className="text-left  text-xl  text-gray-500">
+            admin@birdsoftware.ca
+          </p>
+        </div>
+
+        <div className="flex md:justify-center gap-x-4 mt-10">
+          © 2025 Bird. All Rights Reserved.
+          <Link href="/" className="text-blue-500">
+            Privacy Policy
+          </Link>
+        </div>
+      </footer>
     </div>
   );
 }
