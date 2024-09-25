@@ -19,7 +19,7 @@ const features = [
   {
     icon: "/icons/scalable.svg",
     title: "Scalability + Maintenance ",
-    description: "We offer maintenance and scalability for all websites.",
+    description: "We endeavor to serve companies of all sizes to reap the benefits of ERP software.",
   },
   {
     icon: "/icons/team.svg",
@@ -28,9 +28,9 @@ const features = [
   },
   {
     icon: "/icons/safe.svg",
-    title: "Secure Building",
+    title: "Secure",
     description:
-      "Safe and secure building practices. To ensure your data is safe.",
+      "Here at CODEPLAYERS security comes first! ERP secure your data for as long as a decade or even more.",
   },
   {
     icon: "/icons/analytics.svg",
