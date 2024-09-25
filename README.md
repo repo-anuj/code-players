@@ -1,5 +1,4 @@
-
-<img src="https://ibb.co/zrjGY5k" alt="My project logo">
+![App Screenshot](https://i.ibb.co/6mVgxZd/Screenshot-2024-09-25-121800.png)
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
