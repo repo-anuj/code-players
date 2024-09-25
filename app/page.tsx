@@ -16,7 +16,6 @@ import { Link as ScrollLink, Element } from "react-scroll";
 import { IconStarFilled } from "@tabler/icons-react";
 import { ShootingStarsAndStarsBackgroundDemo } from "@/components/demos/shooting-stars-demo";
 import LetsMakeThingsHappenSection from "@/components/ui/lets-make-things-happen";
-import Head from 'next/head';
 
 const services = [
   {
@@ -72,7 +71,7 @@ export default function Home() {
         className="overflow-hidden rounded-[6px] top-5 sticky md:mx-auto z-50 
    xl:w-4/5 2xl:w-[68%] bg-white flex items-center 
    justify-between py-6 px-4 md:px-8 mx-6"
-      ><Head>
+      >
         <Link href={"/"}>
           <Image
             src={"/logo/logo.png"}
@@ -82,7 +81,6 @@ export default function Home() {
             className="w-28"
           />
         </Link>
-      </Head>
 
         <div className="absolute right-1/2 translate-x-1/2 transform">
           <div className="hidden md:flex gap-x-10 items-center text-gray-700 font-medium text-lg cursor-pointer">
