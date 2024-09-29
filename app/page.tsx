@@ -382,6 +382,10 @@ export default function Home() {
               alt="image"
             />{" "}
           </h1>
+          <div className="w-1/2">
+          <p className="text-left  text-2xl  text-black">We create taste from finest experiences</p>
+          <p className="text-left  text-xl  text-gray-500">As a Solution Provider, we eat sleep and dream digital solutions! Similarly, our interaction with brands happen via email, live chat, text, app or social engagements.
+We are incurably curious, and side by side, we are driven by data. This nature of us helps us in creating the finest wines for our brands, enjoyed by the customers.</p></div>
           <p className="text-left  text-xl  text-gray-500">519-200-5000</p>
           <p className="text-left  text-xl  text-gray-500">
             admin@birdsoftware.ca
@@ -389,9 +393,18 @@ export default function Home() {
         </div>
 
         <div className="flex md:justify-center gap-x-4 mt-10">
-          © 2025 Bird. All Rights Reserved.
-          <Link href="/" className="text-blue-500">
+          © 2024 CodePlayers. All Rights Reserved.
+          <Link href={"/footer"} className="text-blue-500">
             Privacy Policy
+          </Link>
+          <Link href="/" className="text-blue-500">
+            Term of Uses
+          </Link>
+          <Link href="/" className="text-blue-500">
+            legual discloser
+          </Link>
+          <Link href="/" className="text-blue-500">
+            EULA
           </Link>
         </div>
       </footer>
