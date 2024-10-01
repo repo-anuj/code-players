@@ -50,7 +50,7 @@ const services = [
   },
   {
     icon: "/images/s_2.png",
-    title: "Builders and Contractors",
+    title: "Builders and Contractors", 
     description:
       "Infinity ERP is highly competent to manage material flow among the multiple sites for centralized reporting to maintain smooth work flow .",
   },
@@ -101,7 +101,7 @@ export default function Home() {
               smooth={true}
               className="hover:text-blue-500"
             >
-              Process
+              Intrigation
             </ScrollLink>
 
             <ScrollLink
@@ -109,7 +109,7 @@ export default function Home() {
               smooth={true}
               className="hover:text-blue-500"
             >
-              Intrigation
+              Process
             </ScrollLink>
           </div>
         </div>
@@ -386,9 +386,9 @@ export default function Home() {
           <p className="text-left  text-2xl  text-black">We create taste from finest experiences</p>
           <p className="text-left  text-xl  text-gray-500">As a Solution Provider, we eat sleep and dream digital solutions! Similarly, our interaction with brands happen via email, live chat, text, app or social engagements.
 We are incurably curious, and side by side, we are driven by data. This nature of us helps us in creating the finest wines for our brands, enjoyed by the customers.</p></div>
-          <p className="text-left  text-xl  text-gray-500">519-200-5000</p>
+          <p className="text-left  text-xl  text-gray-500">7582-8750-000</p>
           <p className="text-left  text-xl  text-gray-500">
-            admin@birdsoftware.ca
+            codeplayers.infinity@outlook.com
           </p>
         </div>
 
